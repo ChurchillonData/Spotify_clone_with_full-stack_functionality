@@ -36,14 +36,23 @@ The dataset includes details such as song title, artist, duration, popularity, d
 The dataset, songs.csv, consists of 2000 top Spotify tracks between 1998 and 2020, including:
 
 🔹 Column Name	Description
+
 🔹 song	Song title
+
 🔹 artist	Artist name
+
 🔹 duration	Song length (seconds)
+
 🔹 year	Release year
+
 🔹 popularity	Popularity score (0-100)
+
 🔹 danceability	Danceability metric (0-1)
+
 🔹 energy	Energy level (0-1)
+
 🔹 speechiness	Spoken word percentage (0-1)
+
 🔹 genre	Genre classification
 
 
