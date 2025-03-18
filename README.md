@@ -3,6 +3,7 @@
 # 📌 Project Overview
 
 This project develops a Spotify Song Dataset Analyser, leveraging a publicly available dataset of top Spotify tracks (1998–2020). The tool cleans, filters, and stores song data in an SQLite database, then performs various analyses, including:
+
 ✅ Genre-based statistics for a given year
 
 ✅ Artist popularity comparisons across genres
