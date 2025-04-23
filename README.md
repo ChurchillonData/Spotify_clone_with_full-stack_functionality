@@ -1,6 +1,6 @@
-# Spotify Song Analysis and Visualization Tool
+##  Spotify clone with full-stack functionality
 
-# 📌 Project Overview
+## 📌 Project Overview
 
 This project develops a Spotify Song Dataset Analyser, leveraging a publicly available dataset of top Spotify tracks (1998–2020). The tool cleans, filters, and stores song data in an SQLite database, then performs various analyses, including:
 
@@ -32,7 +32,7 @@ The dataset includes details such as song title, artist, duration, popularity, d
 
 
 
-# 🔍 Dataset Description
+## 🔍 Dataset Description
 
 The dataset, songs.csv, consists of 2000 top Spotify tracks between 1998 and 2020, including:
 
@@ -60,7 +60,7 @@ The dataset, songs.csv, consists of 2000 top Spotify tracks between 1998 and 202
 
 
 
-# 🛠 Features and Functionality
+## 🛠 Features and Functionality
 
 ### 1. Data Preprocessing & Storage (CW_Preprocessing.py)
 
@@ -123,7 +123,7 @@ The dataset, songs.csv, consists of 2000 top Spotify tracks between 1998 and 202
 
 
 
-# 📖 How to Run the Project
+## 📖 How to Run the Project
 
 ##### Prerequisites
 
@@ -167,7 +167,7 @@ jupyter notebook
 
 
 
-# 💡 Future Improvements
+## 💡 Future Improvements
 
 🔹 Expand dataset beyond 2020
 
