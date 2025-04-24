@@ -1,139 +1,98 @@
-##  Spotify clone with full-stack functionality
-
-### 📌 Project Overview
-
-This project develops a Spotify Song Dataset Analyser, leveraging a publicly available dataset of top Spotify tracks (1998–2020). The tool cleans, filters, and stores song data in an SQLite database, then performs various analyses, including:
-
-✅ Genre-based statistics for a given year
-
-✅ Artist popularity comparisons across genres
-
-✅ Top 5 artist ranking within a user-defined timeframe
-
-✅ Visualizations using Matplotlib
-
-The dataset includes details such as song title, artist, duration, popularity, danceability, energy, and genre, enabling insights into musical trends.
-
-
-📂 Project Structure
-
-📂 Spotify-Song-Analysis/
-##### ├── 📂 data/                # Contains songs.csv dataset  
- ├── 📂 scripts/             # Python scripts for different analyses  
- │   ├── CW_Preprocessing.py  # Data cleaning & SQLite storage  
- │   ├── Genres.py           # Genre-based statistics for a given year  
- │   ├── Artist.py           # Artist popularity comparison across genres  
- │   ├── Top5.py             # Top 5 artists ranking based on criteria  
- ├── 📂 results/             # Stores generated plots and analysis reports  
- ├── 📜 CWDatabase.db        # SQLite database storing the cleaned dataset  
- ├── 📜 README.md            # Project documentation  
- ├── 📜 requirements.txt      # Dependencies (Pandas, Matplotlib, SQLite)  
- ├── 📜 .gitignore           # Ignore unnecessary files (e.g., large datasets)  
-
-
-
-## 🔍 Dataset Description
-
-The dataset, songs.csv, consists of 2000 top Spotify tracks between 1998 and 2020, including:
-
-🔹 Column Name:	Description
-
-🔹 song:	Song title
-
-🔹 artist:	Artist name
-
-🔹 duration:	Song length (seconds)
-
-🔹 year	Release: year
-
-🔹 popularity:	Popularity score (0-100)
-
-🔹 danceability: Danceability metric (0-1)
-
-🔹 energy:	Energy level (0-1)
-
-🔹 speechiness:	Spoken word percentage (0-1)
-
-🔹 genre:	Genre classification
-
-
-
-
-
-## 🛠 Features and Functionality
-
-### 1. Data Preprocessing & Storage (CW_Preprocessing.py)
-
-🔹 Loads the dataset into a Pandas DataFrame
-
-🔹 Renames and formats columns (e.g., duration_ms → duration in seconds)
-
-🔹 Filters data:
-
-🔹	Popularity >50 (focus on recognized tracks)
-
-🔹	Speechiness between 0.33 and 0.66 (moderate speech content)
-
-🔹	Danceability >0.20 (tracks with rhythm)
-
-🔹 Stores cleaned data into SQLite database (CWDatabase.db)
-
-
-
-### 2. Genre-Based Analysis (Genres.py)
-
-🔹 User inputs a year (1998-2020) 
-
-🔹 Retrieves records for that year from SQLite
-
-🔹 Computes average danceability, total songs, and popularity per genre
-
-🔹 Displays results in a table
-
-🔹 Generates a pie chart visualization using Matplotlib
-
-
-
-
-### 3. Artist Popularity Analysis (Artist.py)
-
-🔹 User inputs an artist’s name
-
-🔹 Fetches the artist’s average song popularity per genre
-
-🔹 Compares it to overall genre popularity
-
-🔹 Highlights genres where the artist is above average
-
-🔹 Generates a bar chart comparing artist vs. overall genre popularity
-
-
-
-### 4. Top 5 Artists Ranking (Top5.py)
-
-🔹 User inputs start and end year
-
-🔹 Retrieves songs released in that period
-
-🔹 Calculates ranking value (e.g., Songs Count × Weight + Avg. Popularity × Weight)
-
-🔹 Displays Top 5 artists, highlighting yearly leaders
-
-🔹 Generates a line chart for ranking trends over time
-
-
-
-## 📖 How to Run the Project
-
-##### Prerequisites
-
-Ensure you have Python installed along with the required libraries:
-
+# 🎵 Spotify Song Dataset Analyzer
+
+## 📌 Project Overview
+
+This project builds a full-stack Spotify Song Dataset Analyzer using a public dataset of top Spotify tracks (1998–2020). It involves cleaning and storing data in SQLite, performing analytical queries, and generating insightful visualizations with Matplotlib.
+
+**Key Features:**
+- Genre-based statistics for a specific year  
+- Artist popularity comparisons across genres  
+- Top 5 artist ranking within a custom timeframe  
+- Visual analytics for trend discovery  
+
+The dataset includes metadata like song title, artist, duration, popularity, danceability, energy, and genre.
+
+---
+
+## 📁 Project Structure
+Spotify-Song-Analysis/ │ ├── data/ → Contains songs.csv dataset
+├── scripts/ → Python scripts for different analyses
+│ ├── CW_Preprocessing.py → Data cleaning & SQLite storage
+│ ├── Genres.py → Genre-based statistics
+│ ├── Artist.py → Artist popularity comparisons
+│ └── Top5.py → Top 5 artists ranking
+│ ├── results/ → Stores generated plots and reports
+├── CWDatabase.db → SQLite database (cleaned data)
+├── requirements.txt → Project dependencies
+├── .gitignore → Ignore unnecessary files
+└── README.md → Project documentation
+
+---
+## 📊 Dataset Description
+
+**Filename:** `songs.csv`  
+**Timeframe:** 1998–2020  
+**Total Tracks:** 2000  
+
+| Column        | Description                          |
+|---------------|--------------------------------------|
+| `song`        | Title of the song                    |
+| `artist`      | Artist name                          |
+| `duration`    | Length in seconds                    |
+| `year`        | Year of release                      |
+| `popularity`  | Popularity score (0–100)             |
+| `danceability`| Danceability metric (0–1)            |
+| `energy`      | Energy level (0–1)                   |
+| `speechiness` | Spoken word content (0–1)            |
+| `genre`       | Genre category                       |
+
+---
+
+## ⚙️ Features and Functionality
+
+### 1. Data Preprocessing & Storage  
+**Script:** `CW_Preprocessing.py`
+- Loads and formats dataset
+- Filters out:
+  - Popularity ≤ 50  
+  - Speechiness outside 0.33–0.66  
+  - Danceability ≤ 0.20  
+- Saves cleaned data to `CWDatabase.db`
+
+---
+
+### 2. Genre-Based Analysis  
+**Script:** `Genres.py`
+- User inputs a year (1998–2020)
+- Calculates genre-wise average danceability, popularity, and song count
+- Displays results in table and pie chart
+
+---
+
+### 3. Artist Popularity Analysis  
+**Script:** `Artist.py`
+- User inputs artist name
+- Compares artist’s genre-wise popularity with overall genre averages
+- Generates comparative bar chart
+
+---
+
+### 4. Top 5 Artists Ranking  
+**Script:** `Top5.py`
+- User inputs start and end year
+- Calculates a weighted ranking score per artist
+- Displays Top 5 artists and generates trend line chart
+
+---
+
+## 🖥️ How to Run the Project
+
+### Prerequisites  
+Install required dependencies:  
 pip install -r requirements.txt
 
- Running the Programs
- 
-	1.	Data Preprocessing & Storage
+
+1.	Data Preprocessing & Storage
 
 python scripts/CW_Preprocessing.py
 
@@ -167,15 +126,3 @@ jupyter notebook
 
 
 
-## 💡 Future Improvements
-
-🔹 Expand dataset beyond 2020
-
-🔹 Add more features (e.g., tempo, key, loudness)
-
-🔹 Improve ranking formula for Top 5 Artists
-
-
-
-
- 
