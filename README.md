@@ -1,8 +1,8 @@
-# 🎵 Spotify Song Dataset Analyzer
+# 🎵 Spotify Song Dataset Analyser
 
 ## 📌 Project Overview
 
-This project builds a full-stack Spotify Song Dataset Analyzer using a public dataset of top Spotify tracks (1998–2020). It involves cleaning and storing data in SQLite, performing analytical queries, and generating insightful visualizations with Matplotlib.
+This project builds a full-stack Spotify Song Dataset Analyzer using a public dataset of top Spotify tracks (1998–2020). It involves cleaning and storing data in SQLite, performing analytical queries, and generating insightful visualisations with Matplotlib.
 
 **Key Features:**
 - Genre-based statistics for a specific year  
