@@ -13,7 +13,7 @@ This project builds a full-stack Spotify Song Dataset Analyzer using a public da
 The dataset includes metadata like song title, artist, duration, popularity, danceability, energy, and genre
 
 ---
-## 📊 Dataset Description
+##  Dataset Description
 
 **Filename:** `songs.csv`  
 **Timeframe:** 1998–2020  
