@@ -1,6 +1,6 @@
 # 🎵 Spotify Song Dataset Analyser
 
-## 📌 Project Overview
+##  Project Overview
 
 This project builds a full-stack Spotify Song Dataset Analyzer using a public dataset of top Spotify tracks (1998–2020). It involves cleaning and storing data in SQLite, performing analytical queries, and generating insightful visualisations with Matplotlib.
 
@@ -10,22 +10,7 @@ This project builds a full-stack Spotify Song Dataset Analyzer using a public da
 - Top 5 artist ranking within a custom timeframe  
 - Visual analytics for trend discovery  
 
-The dataset includes metadata like song title, artist, duration, popularity, danceability, energy, and genre.
-
----
-
-## 📁 Project Structure
-Spotify-Song-Analysis/ │ ├── data/ → Contains songs.csv dataset
-├── scripts/ → Python scripts for different analyses
-│ ├── CW_Preprocessing.py → Data cleaning & SQLite storage
-│ ├── Genres.py → Genre-based statistics
-│ ├── Artist.py → Artist popularity comparisons
-│ └── Top5.py → Top 5 artists ranking
-│ ├── results/ → Stores generated plots and reports
-├── CWDatabase.db → SQLite database (cleaned data)
-├── requirements.txt → Project dependencies
-├── .gitignore → Ignore unnecessary files
-└── README.md → Project documentation
+The dataset includes metadata like song title, artist, duration, popularity, danceability, energy, and genre
 
 ---
 ## 📊 Dataset Description
@@ -48,7 +33,7 @@ Spotify-Song-Analysis/ │ ├── data/ → Contains songs.csv dataset
 
 ---
 
-## ⚙️ Features and Functionality
+##  Features and Functionality
 
 ### 1. Data Preprocessing & Storage  
 **Script:** `CW_Preprocessing.py`
@@ -85,7 +70,7 @@ Spotify-Song-Analysis/ │ ├── data/ → Contains songs.csv dataset
 
 ---
 
-## 🖥️ How to Run the Project
+##  How to Run the Project
 
 ### Prerequisites  
 Install required dependencies:  
